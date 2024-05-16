@@ -1,5 +1,8 @@
 package de.stihl.challenge_40;
 
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -8,7 +11,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.UUID;
+
 public class MainActivity extends AppCompatActivity {
+
 
     static final UUID espUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
