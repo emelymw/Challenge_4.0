@@ -17,13 +17,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:editable="false"
                 android:ems="10"
+                android:enabled="true"
                 android:inputType="text"
-                android:text="Drehzahl" />
+                android:text="Drehzahl"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/drehzahl"
@@ -36,13 +39,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="DrehzahlMax" />
+                android:text="DrehzahlMax"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/drehzahlmax"
@@ -55,13 +59,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Leistung" />
+                android:text="Leistung"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/leistung"
@@ -74,13 +79,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Temperatur" />
+                android:text="Temperatur"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/temperatur"
@@ -93,13 +99,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Overheating" />
+                android:text="Overheating"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/overheating"
@@ -112,13 +119,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Modus" />
+                android:text="Modus"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/modus"
@@ -131,13 +139,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Batterizustand" />
+                android:text="Batterizustand"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/batterie"
@@ -150,13 +159,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Gashebel" />
+                android:text="Gashebel"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/gashebel"
@@ -169,13 +179,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextText5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Bremse" />
+                android:text="Bremse"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/bremse"
