@@ -4,11 +4,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.Bundle;
-import android.content.pm.PackageManager;
-
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import android.Manifest;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,16 +32,24 @@ public class MainActivity extends AppCompatActivity {
 
     private final AtomicBoolean runningMSAThread = new AtomicBoolean(false);
 
-    private TextView GashebelText;
     public String Drehzahl = "";
+    private TextView DrehzahlText;
     public String MaxDrehzahl = "";
+    private TextView MaxDrehzahlText;
     public String Leistung = "";
+    private TextView LeistungText;
     public String Temperatur = "";
+    private TextView TemperaturText;
     public String Overheating = "";
+    private TextView OverheatingText;
     public String Modus = "";
+    private TextView ModusText;
     public String Batteriestand = "";
+    private TextView Batterietext;
     public String Gashebel = "";
+    private TextView GashebelText;
     public String Bremse = "";
+    private TextView BremseText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +77,16 @@ public class MainActivity extends AppCompatActivity {
             runningMSAThread.set(true);
             Log.i("THREAD", "MSA thread started");
 
+            DrehzahlText = findViewById(R.id.drehzahl);
+            MaxDrehzahlText = findViewById(R.id.drehzahlmax);
+            LeistungText = findViewById(R.id.leistung);
+            TemperaturText = findViewById(R.id.temperatur);
+            OverheatingText = findViewById(R.id.overheating);
+            ModusText = findViewById(R.id.modus);
+            Batterietext = findViewById(R.id.batterie);
             GashebelText = findViewById(R.id.gashebel);
+            BremseText = findViewById(R.id.bremse);
+
 
             while (runningMSAThread.get()) {
                 int counter_bt = 0;
@@ -188,7 +200,15 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
+                                DrehzahlText.setText(Drehzahl);
+                                MaxDrehzahlText.setText(MaxDrehzahl);
+                                LeistungText.setText(Leistung);
+                                TemperaturText.setText(Temperatur);
+                                OverheatingText.setText(Overheating);
+                                ModusText.setText(Modus);
+                                Batterietext.setText(Batteriestand);
                                 GashebelText.setText(Gashebel);
+                                BremseText.setText(Bremse);
                             }
                         });
 
