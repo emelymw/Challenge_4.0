@@ -21,6 +21,7 @@ import java.io.InputStream;
 import java.util.UUID;
 
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private final AtomicBoolean runningMSAThread = new AtomicBoolean(false);
 
+    private TextView GashebelText;
     public String Drehzahl = "";
     public String MaxDrehzahl = "";
     public String Leistung = "";
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             runningMSAThread.set(true);
             Log.i("THREAD", "MSA thread started");
+
+            GashebelText = findViewById(R.id.gashebel);
 
             while (runningMSAThread.get()) {
                 int counter_bt = 0;
@@ -180,6 +184,14 @@ public class MainActivity extends AppCompatActivity {
                             }
                             Log.i("Drehzahl", Drehzahl);
                         }
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                GashebelText.setText(Gashebel);
+                            }
+                        });
+
                     } while (runningMSAThread.get());
                 } catch (IOException e) {
                     e.printStackTrace();
